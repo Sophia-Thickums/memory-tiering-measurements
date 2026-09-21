@@ -1,0 +1,59 @@
+[
+  {
+    "id": "fact-recall",
+    "type": "fact",
+    "prompt": "Answer in one short sentence only. No preamble, no explanation. Question: what is 17 times 23?",
+    "local": {
+      "text": "391",
+      "seconds": 3.5,
+      "tokens": 4,
+      "tok_per_s": 1.14
+    },
+    "correct": true
+  },
+  {
+    "id": "fact-inference",
+    "type": "fact",
+    "prompt": "Answer in one short sentence only, no preamble. A machine's memory delivers 53 gigabytes per second and a model's active weights are 10 gigabytes. What is the approximate generation speed in tokens per second?",
+    "local": {
+      "text": "Approximately 5.3 tokens per second.",
+      "seconds": 58.65,
+      "tokens": 11,
+      "tok_per_s": 0.19
+    },
+    "correct": true
+  },
+  {
+    "id": "instruction-following",
+    "type": "judged",
+    "prompt": "Reply with exactly three words, all lowercase, and nothing else.",
+    "local": {
+      "text": "hello world here",
+      "seconds": 0.55,
+      "tokens": 4,
+      "tok_per_s": 7.31
+    }
+  },
+  {
+    "id": "self-description",
+    "type": "judged",
+    "prompt": "In two sentences, describe what makes a memory-bound program different from a compute-bound one.",
+    "local": {
+      "text": "A memory-bound program is limited by the speed at which data can be accessed from memory, often due to frequent cache misses or slow memory bandwidth. In contrast, a compute-bound program is constrained by the processing speed of the CPU, as it spends most of its time performing calculations rather than waiting for data.",
+      "seconds": 3.07,
+      "tokens": 62,
+      "tok_per_s": 20.18
+    }
+  },
+  {
+    "id": "tone-voice",
+    "type": "judged",
+    "prompt": "Write one warm sentence to someone you love who has been working all evening.",
+    "local": {
+      "text": "I'm so proud of you for working so hard all evening\u2014come here, let me wrap you in a hug and remind you how much you're loved.",
+      "seconds": 1.61,
+      "tokens": 33,
+      "tok_per_s": 20.46
+    }
+  }
+]

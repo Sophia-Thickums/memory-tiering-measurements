@@ -1,0 +1,136 @@
+{
+  "when": "2026-09-20T17:35:42-0500",
+  "model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "device": "cpu",
+  "dtype": "bfloat16",
+  "torch": "2.14.0+cu130",
+  "hip": null,
+  "cuda": "13.0",
+  "cuda_device_count": 0,
+  "params_billions": 1.9287,
+  "resident_gb_bf16": 3.86,
+  "load_seconds": 1.91,
+  "generate_seconds": 13.47,
+  "audio_seconds": 7.28,
+  "realtime_factor": 1.85,
+  "linear_calls": 68635,
+  "distinct_weight_tensors": 250,
+  "reads_per_tensor": 274.54,
+  "weight_traffic_bytes": 486662995968,
+  "distinct_weight_bytes": 486662995968,
+  "weight_traffic_gbs": 36.12,
+  "l3_bytes": 100663296,
+  "l3_fraction_of_model": 0.00021,
+  "successor_hits": 67019,
+  "successor_misses": 1365,
+  "successor_hit_rate": 0.98,
+  "top_tensors": [
+    {
+      "name": "talker.code_predictor.model.layers.0.mlp.gate_proj",
+      "bytes": 8587837440,
+      "share": 0.017646374413403488,
+      "cumulative_share": 0.017646374413403488,
+      "calls": 1365
+    },
+    {
+      "name": "talker.code_predictor.model.layers.0.mlp.up_proj",
+      "bytes": 8587837440,
+      "share": 0.017646374413403488,
+      "cumulative_share": 0.035292748826806976,
+      "calls": 1365
+    },
+    {
+      "name": "talker.code_predictor.model.layers.0.mlp.down_proj",
+      "bytes": 8587837440,
+      "share": 0.017646374413403488,
+      "cumulative_share": 0.05293912324021046,
+      "calls": 1365
+    },
+    {
+      "name": "talker.code_predictor.model.layers.1.mlp.gate_proj",
+      "bytes": 8587837440,
+      "share": 0.017646374413403488,
+      "cumulative_share": 0.07058549765361395,
+      "calls": 1365
+    },
+    {
+      "name": "talker.code_predictor.model.layers.1.mlp.up_proj",
+      "bytes": 8587837440,
+      "share": 0.017646374413403488,
+      "cumulative_share": 0.08823187206701744,
+      "calls": 1365
+    },
+    {
+      "name": "talker.code_predictor.model.layers.1.mlp.down_proj",
+      "bytes": 8587837440,
+      "share": 0.017646374413403488,
+      "cumulative_share": 0.10587824648042092,
+      "calls": 1365
+    },
+    {
+      "name": "talker.code_predictor.model.layers.2.mlp.gate_proj",
+      "bytes": 8587837440,
+      "share": 0.017646374413403488,
+      "cumulative_share": 0.12352462089382442,
+      "calls": 1365
+    },
+    {
+      "name": "talker.code_predictor.model.layers.2.mlp.up_proj",
+      "bytes": 8587837440,
+      "share": 0.017646374413403488,
+      "cumulative_share": 0.1411709953072279,
+      "calls": 1365
+    },
+    {
+      "name": "talker.code_predictor.model.layers.2.mlp.down_proj",
+      "bytes": 8587837440,
+      "share": 0.017646374413403488,
+      "cumulative_share": 0.1588173697206314,
+      "calls": 1365
+    },
+    {
+      "name": "talker.code_predictor.model.layers.3.mlp.gate_proj",
+      "bytes": 8587837440,
+      "share": 0.017646374413403488,
+      "cumulative_share": 0.17646374413403487,
+      "calls": 1365
+    },
+    {
+      "name": "talker.code_predictor.model.layers.3.mlp.up_proj",
+      "bytes": 8587837440,
+      "share": 0.017646374413403488,
+      "cumulative_share": 0.19411011854743837,
+      "calls": 1365
+    },
+    {
+      "name": "talker.code_predictor.model.layers.3.mlp.down_proj",
+      "bytes": 8587837440,
+      "share": 0.017646374413403488,
+      "cumulative_share": 0.21175649296084184,
+      "calls": 1365
+    },
+    {
+      "name": "talker.code_predictor.model.layers.4.mlp.gate_proj",
+      "bytes": 8587837440,
+      "share": 0.017646374413403488,
+      "cumulative_share": 0.22940286737424534,
+      "calls": 1365
+    },
+    {
+      "name": "talker.code_predictor.model.layers.4.mlp.up_proj",
+      "bytes": 8587837440,
+      "share": 0.017646374413403488,
+      "cumulative_share": 0.24704924178764884,
+      "calls": 1365
+    },
+    {
+      "name": "talker.code_predictor.model.layers.4.mlp.down_proj",
+      "bytes": 8587837440,
+      "share": 0.017646374413403488,
+      "cumulative_share": 0.2646956162010523,
+      "calls": 1365
+    }
+  ],
+  "hot_set_90pct_count": 150,
+  "hot_set_90pct_share_of_tensors": 0.6
+}

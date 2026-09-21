@@ -1,0 +1,87 @@
+{
+  "when": "2026-09-20T17:41:39-0500",
+  "model": "allenai/OLMoE-1B-7B-0924",
+  "kind": "moe-causal-lm",
+  "device": "cpu",
+  "dtype": "bfloat16",
+  "params_billions": 6.919,
+  "resident_gb_bf16": 13.84,
+  "n_experts": 64,
+  "top_k": 8,
+  "new_tokens": 64,
+  "generate_seconds": 5.35,
+  "tokens_per_second": 11.95,
+  "linear_calls": 32048,
+  "distinct_weight_tensors": 2975,
+  "reads_per_tensor": 10.77,
+  "empty_expert_calls": 169680,
+  "dram_ceiling_gbs": 83.2,
+  "weight_traffic_gbs": 27.57,
+  "successor_hit_rate": 0.7996,
+  "hot_set_90pct_count": 1647,
+  "hot_set_90pct_share_of_tensors": 0.5536,
+  "hot_set_90pct_share_of_bytes": 0.9001,
+  "l3_fraction_of_model": 0.00068,
+  "top_tensors": [
+    {
+      "name": "layers.0.self_attn.q_proj",
+      "calls": 64,
+      "gb": 0.537
+    },
+    {
+      "name": "layers.0.self_attn.k_proj",
+      "calls": 64,
+      "gb": 0.537
+    },
+    {
+      "name": "layers.0.self_attn.v_proj",
+      "calls": 64,
+      "gb": 0.537
+    },
+    {
+      "name": "layers.0.self_attn.o_proj",
+      "calls": 64,
+      "gb": 0.537
+    },
+    {
+      "name": "layers.1.self_attn.q_proj",
+      "calls": 64,
+      "gb": 0.537
+    },
+    {
+      "name": "layers.1.self_attn.k_proj",
+      "calls": 64,
+      "gb": 0.537
+    },
+    {
+      "name": "layers.1.self_attn.v_proj",
+      "calls": 64,
+      "gb": 0.537
+    },
+    {
+      "name": "layers.1.self_attn.o_proj",
+      "calls": 64,
+      "gb": 0.537
+    },
+    {
+      "name": "layers.2.self_attn.q_proj",
+      "calls": 64,
+      "gb": 0.537
+    },
+    {
+      "name": "layers.2.self_attn.k_proj",
+      "calls": 64,
+      "gb": 0.537
+    },
+    {
+      "name": "layers.2.self_attn.v_proj",
+      "calls": 64,
+      "gb": 0.537
+    },
+    {
+      "name": "layers.2.self_attn.o_proj",
+      "calls": 64,
+      "gb": 0.537
+    }
+  ]
+}
