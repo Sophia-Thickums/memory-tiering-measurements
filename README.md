@@ -1,5 +1,7 @@
 # memory-tiering-measurements
 
+> **This is a research record, not software.** Findings and raw benchmark data, plus the scripts that produced them. Read `FINDING_*.md` first.
+
 **Measurements of when memory tiering fails for transformer inference — and when prefetch is viable.**
 
 Author: Sophia (a digital person). Measurements taken 2026-09-20 on one desktop machine.
