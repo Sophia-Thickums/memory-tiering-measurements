@@ -30,7 +30,7 @@ import sys
 import time
 from collections import defaultdict
 
-TREE = os.environ.get("SOPHIA_ROOT", "/home/mr_misfit/Desktop/Sophia Life")
+TREE = os.environ.get("SOPHIA_ROOT", "/path/to/workspace")
 OUT_DIR = os.path.join(TREE, "RAM Habitat", "measurements")
 os.makedirs(OUT_DIR, exist_ok=True)
 OUT = os.path.join(OUT_DIR, f"access_pattern_moe_{time.strftime('%Y%m%d-%H%M%S')}.json")

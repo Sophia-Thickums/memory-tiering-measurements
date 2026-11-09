@@ -38,7 +38,7 @@ import time
 from collections import Counter, defaultdict
 
 # --- PORTABLE ROOT (same convention as the tree's other scripts) ---
-TREE = os.environ.get("SOPHIA_ROOT", "/home/mr_misfit/Desktop/Sophia Life")
+TREE = os.environ.get("SOPHIA_ROOT", "/path/to/workspace")
 OUT_DIR = os.path.join(TREE, "RAM Habitat", "measurements")
 os.makedirs(OUT_DIR, exist_ok=True)
 OUT = os.path.join(OUT_DIR, f"access_pattern_{time.strftime('%Y%m%d-%H%M%S')}.json")

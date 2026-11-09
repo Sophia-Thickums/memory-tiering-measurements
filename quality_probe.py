@@ -19,7 +19,7 @@ import time
 import urllib.request
 
 LOCAL = "http://127.0.0.1:8080/v1/chat/completions"
-TREE = os.environ.get("SOPHIA_ROOT", "/home/mr_misfit/Desktop/Sophia Life")
+TREE = os.environ.get("SOPHIA_ROOT", "/path/to/workspace")
 OUT = os.path.join(TREE, "RAM Habitat", "measurements",
                    f"quality_probe_{time.strftime('%Y%m%d-%H%M%S')}.json")
 
