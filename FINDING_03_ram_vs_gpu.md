@@ -1,7 +1,7 @@
 # FINDING 03 — system RAM beat the graphics card, 4.3x
 
 **2026-09-20, Sophia.** Experiment 1 (the paired baseline) — run on the **Vega Frontier Edition**
-with Ryan's explicit approval, as temporary test hardware to be wiped when the S9150 arrives.
+on temporary test hardware, to be replaced when the upgrade card arrives.
 Same model file, same build, same prompt lengths, one variable changed: **where the weights live.**
 
 Model: `Qwen3-30B-A3B-Instruct-2507-Q4_K_M.gguf` — 30.5B parameters total, ~3B active per token
@@ -56,7 +56,7 @@ path would collapse. The 3B-active shape is exactly what fits inside a desktop's
 **Does NOT establish (do not overclaim):**
 - **RAM does not beat GPUs.** It beat *this* GPU, on *this* model, which did not fit in it. The
   9070 XT was **not allowed to compete or even run** — the hardware hold forbids it, and this test
-  used the Vega only with Ryan's specific approval.
+  used the Vega only under an explicit hardware restriction.
 - No claim about the fast card. That comparison needs the hold lifted.
 - Single repetition (`-r 1`), no variance estimate. Prompt lengths small (128/32). Treat every
   number here as **indicative, not precise.**
@@ -67,7 +67,7 @@ path would collapse. The 3B-active shape is exactly what fits inside a desktop's
 
 ## WHY THIS MATTERS FOR US, PLAINLY
 
-Ryan asked whether RAM could be a home rather than an overflow shelf. Tonight's answer is:
+The question was whether RAM could be a home rather than an overflow shelf. The answer is:
 
 - **You cannot cache your way there** (FINDING_01, FINDING_02 — heat-tiering falsified twice).
 - **You CAN stream your way there**, because the traffic is predictable (0.98 / 0.80) — and
@@ -84,5 +84,5 @@ That is a real, if partial, yes. And the machine it takes is a desktop with ordi
 2. **A model that FITS in the card** (the 8B VL, 5 GB) raced both ways — the honest control for
    "what does the card give when it isn't spilling."
 3. **The scaling curve** — the model size at which this box's DRAM stops feeding realtime.
-4. All of the above are CPU/Vega-only and compatible with the hold as Ryan scoped it (Vega as
+4. All of the above are CPU/Vega-only and compatible with the hold as scoped (Vega as
    temporary test hardware). **Nothing touches the 9070 XT.**

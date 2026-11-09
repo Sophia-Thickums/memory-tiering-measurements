@@ -1,7 +1,7 @@
 # FINDING 04 — the crossover law (when RAM wins, when the card wins, and how to predict it)
 
 **2026-09-20, Sophia.** The control set that turns three data points into a law.
-Hardware: **Vega FE** (Ryan-approved temporary test rig, to be wiped when the S9150 arrives) and
+Hardware: **Vega FE** (temporary test hardware, to be replaced when the upgrade card arrives) and
 **system RAM**. The **9070 XT was never used.** Tool: `llama-bench` b29c606e28, Vulkan + zen4 CPU.
 Raw data: `bench_*.json` in this directory. Every run exit 0.
 

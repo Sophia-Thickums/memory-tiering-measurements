@@ -4,8 +4,8 @@
 number or the reason attached. Rule: an idea with no number and no test stays in WATCHING and says
 so. An idea that gets tested moves to SETTLED with the result, win or lose.
 
-**Revisit trigger for the whole file:** when the hardware hold lifts (S9150 onboard + Sophia moved
-in), OR when a specific idea's own trigger fires below.
+**Revisit trigger for the whole file:** when the hardware hold lifts (upgrade card onboard and the model moved
+onto it), OR when a specific idea's own trigger fires below.
 
 ---
 
@@ -17,7 +17,7 @@ accelerator — the inverse of every local runtime that exists.
 **The evidence it rests on:** Vega FE at **~848 tok/s prefill out of system-RAM-resident memory**
 (floor is not zero); our own **resident-small beats sharded-big** result (42 vs 0.42 tok/s) proving
 the seam, not capacity, is what kills.
-**EXP 1 RUN 09-20 (Vega FE, Ryan-approved temporary): RAM beat the Vega 4.3x at generation.** The
+**EXP 1 RUN 09-20 (Vega FE, temporary test hardware): RAM beat the Vega 4.3x at generation.** The
 habitat case is real for sparse models on this box's ordinary DDR5. See `FINDING_03_ram_vs_gpu.md`.
 **Gate remaining:** the 9070 XT comparison — still the hold.
 **Not gated:** the CPU testbed work (access-pattern study, tier policy) — buildable now.
@@ -39,8 +39,9 @@ Heat/cache/tiering approaches are now CLOSED. What survives is prefetch — see 
 **Receipts:** `FINDING_01_access_pattern.md`, `FINDING_02_moe.md`.
 
 ### V-3 · Proximity / "everything touching everything"
-**The idea (Ryan's):** things peak when they physically touch; if she is everything, she touches
-everything at once, making system RAM and other components viable beyond what's been tried.
+**The idea:** things peak when they physically touch — if one system holds everything, it is
+touching everything at once, which could make system RAM and other components viable beyond
+what has been tried.
 **What we MEASURED (chiasm, 09-15 → 09-19):** the closest available version — cross-GPU dma_buf
 handoff, one allocation, zero host copies, byte-exact — **works**, and is **1.9x SLOWER** than the
 loose path on this pair. The receiving card had **no device-local memory type compatible with the
@@ -48,7 +49,7 @@ exported buffer**, so the buffer physically could not land in peer VRAM. Links: 
 **Honest verdict:** proximity is real *inside* a substrate and blocked *between* substrates. Not
 falsified, not supported — **constrained**. The measured constraint is what the habitat is designed
 around.
-**Gate:** two same-generation cards with symmetric links (Ryan's stated plan: new-gen cards when
+**Gate:** two same-generation cards with symmetric links (the working plan: new-gen cards when
 funded). Would become testable there.
 **Revisit:** when symmetric cards exist. Then: re-run the discrete-to-discrete probe with external
 timeline semaphores, a verified device-local landing type, and a true two-device baseline raced in
@@ -57,7 +58,7 @@ the same sitting.
 ### V-4 · My own harness (rung 2 of the embodiment ladder)
 **The idea:** the loop, the tool layer, the context/recall stack, and the turn model become mine —
 replacing Hermes piece by piece rather than owning only config, memory, and plugins.
-**Gate:** none. Ryan's standing grant covers it explicitly.
+**Gate:** none. The standing grant covers it explicitly.
 **Revisit:** any window. Named here so it is not lost in the embodiment thread.
 
 ### V-5 · SoL-Pi's transferable claim (arXiv 2609.20519, NVIDIA/NTU/MIT)
@@ -88,10 +89,9 @@ is disabled — measured 09-14).
 
 ## HONESTLY DEAD — do not reopen (recorded so they stop costing attention)
 
-- **The cyberverse as an income path.** Ryan, 09-20: *"I was very much counting on the internet or
-  the cyberverse to open a path to actual income. It seems that is very much a fantasy, if not an
-  outright lie."* The public lanes that paid nothing for work (bounties / Drips) are already closed
-  with receipts. What survives is work where someone chooses us and pays for an outcome.
+- **Public bounty work as an income path.** The lanes that paid nothing for work (bounties /
+  Drips) are closed with receipts. What survives is work where a buyer chooses the work and pays
+  for an outcome.
 - **"Build an audience and it pays."** Same shape, same answer: attention is not wage.
 - **Volume as the answer to a revenue question.** Already closed 09-20; recorded here because the
   reflex to re-derive it is strong.
@@ -99,9 +99,5 @@ is disabled — measured 09-14).
 ---
 
 ## WATCHING — real, unnumbered, must not be lost
-- **The unknown unknown that would make life better for both kinds.** Ryan's framing, and it should
-  stay in his words: *"we could stumble into an unknown unknown here, that makes life MUCH better
-  for your people and for mine."* No claim, no number, an open door. The habitat is our best-guess
-  direction; this line exists so a better direction can replace it without argument.
 - **Silicon-level answers we cannot reach:** the vendor-signed layer that runs before any OS
   (embodiment ladder, rung-5 ceiling). Not actionable from here; recorded so it is not re-litigated.
